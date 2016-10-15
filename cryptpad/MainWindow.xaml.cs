@@ -48,6 +48,9 @@ namespace cryptpad
 
             textEditor.TextChanged += new TextChangedEventHandler((sender, args) => fileChanged = true);
 
+            // Initialize based on settings
+            UpdateTextWrappingMode();
+
             // If a file was "opened with" cryptpad, try to load it
             App app = (App)Application.Current;
             if(app.StartupFilePath != null)
@@ -326,6 +329,23 @@ namespace cryptpad
             }
 
             return false;
+        }
+
+        public void WordWrapCommandExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            UpdateTextWrappingMode();
+        }
+
+        private void UpdateTextWrappingMode()
+        {
+            if (Properties.Settings.Default.WordWrap)
+            {
+                textEditor.TextWrapping = TextWrapping.Wrap;
+            }
+            else
+            {
+                textEditor.TextWrapping = TextWrapping.NoWrap;
+            }
         }
 
         /// <summary>

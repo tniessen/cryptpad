@@ -9,5 +9,11 @@ namespace cryptpad
             "Exit",
             typeof(CustomCommands)
         );
+
+        public static readonly RoutedUICommand WordWrap = new RoutedUICommand(
+            "Word wrap",
+            "WordWrap",
+            typeof(CustomCommands)
+        );
     }
 }

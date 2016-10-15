@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cryptpad"
+        xmlns:properties="clr-namespace:cryptpad.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="700">
     <Window.CommandBindings>
@@ -11,6 +12,7 @@
         <CommandBinding Command="Open" Executed="OpenCommandExecuted" />
         <CommandBinding Command="Save" Executed="SaveCommandExecuted" CanExecute="CanExecuteSaveCommand" />
         <CommandBinding Command="SaveAs" Executed="SaveAsCommandExecuted" />
+        <CommandBinding Command="local:CustomCommands.WordWrap" Executed="WordWrapCommandExecuted" />
         <CommandBinding Command="local:CustomCommands.Exit" Executed="ExitCommandExecuted" />
     </Window.CommandBindings>
     <DockPanel>
@@ -28,6 +30,9 @@
                 <MenuItem Command="Redo" />
                 <Separator />
                 <MenuItem Command="SelectAll" />
+            </MenuItem>
+            <MenuItem Header="F_ormat">
+                <MenuItem IsCheckable="True" Command="local:CustomCommands.WordWrap" IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=WordWrap}" />
             </MenuItem>
         </Menu>
         <TextBox AcceptsReturn="True" Name="textEditor" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" />
