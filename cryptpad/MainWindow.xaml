@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:cryptpad"
         xmlns:properties="clr-namespace:cryptpad.Properties"
         mc:Ignorable="d"
+        Loaded="WindowLoaded"
+        Closing="WindowClosing"
         Title="MainWindow" Height="500" Width="700">
     <Window.CommandBindings>
         <CommandBinding Command="New" Executed="NewCommandExecuted" />
@@ -44,6 +46,12 @@
                 <TextBlock Name="statusBarText" />
             </StatusBarItem>
         </StatusBar>
-        <TextBox AcceptsReturn="True" Name="textEditor" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" />
+        <TextBox AcceptsReturn="True"
+                 Name="textEditor"
+                 AcceptsTab="True"
+                 HorizontalScrollBarVisibility="Auto"
+                 VerticalScrollBarVisibility="Auto"
+                 TextChanged="EditorTextChanged"
+                 SelectionChanged="EditorSelectionChanged" />
     </DockPanel>
 </Window>

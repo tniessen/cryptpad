@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.ComponentModel;
 using System.IO;
 using System.Security;
 using System.Security.Cryptography;
@@ -44,12 +45,6 @@ namespace cryptpad
         {
             InitializeComponent();
 
-            Loaded += new RoutedEventHandler((sender, args) => textEditor.Focus());
-
-            textEditor.TextChanged += new TextChangedEventHandler((sender, args) => fileChanged = true);
-
-            textEditor.SelectionChanged += new RoutedEventHandler((sender, args) => UpdateStatusBarText());
-
             // Initialize based on settings
             UpdateTextWrappingMode();
             UpdateStatusBarVisibility();
@@ -67,6 +62,29 @@ namespace cryptpad
             {
                 NewDocument();
             }
+        }
+
+        private void WindowLoaded(object sender, RoutedEventArgs e)
+        {
+            textEditor.Focus();
+        }
+
+        private void WindowClosing(object sender, CancelEventArgs e)
+        {
+            if (!SuggestSave())
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void EditorTextChanged(object sender, TextChangedEventArgs e)
+        {
+            fileChanged = true;
+        }
+
+        private void EditorSelectionChanged(object sender, RoutedEventArgs e)
+        {
+            UpdateStatusBarText();
         }
 
         /// <summary>
@@ -395,9 +413,7 @@ namespace cryptpad
         /// </summary>
         public void ExitCommandExecuted(object sender, ExecutedRoutedEventArgs e)
         {
-            if (!SuggestSave()) return;
-
-            Application.Current.Shutdown();
+            Close();
         }
 
         /// <summary>
