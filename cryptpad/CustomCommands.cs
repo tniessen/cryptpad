@@ -15,5 +15,11 @@ namespace cryptpad
             "WordWrap",
             typeof(CustomCommands)
         );
+
+        public static readonly RoutedUICommand StatusBar = new RoutedUICommand(
+            "Status bar",
+            "StatusBar",
+            typeof(CustomCommands)
+        );
     }
 }

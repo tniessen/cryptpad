@@ -34,5 +34,17 @@ namespace cryptpad.Properties {
                 this["WordWrap"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StatusBar {
+            get {
+                return ((bool)(this["StatusBar"]));
+            }
+            set {
+                this["StatusBar"] = value;
+            }
+        }
     }
 }

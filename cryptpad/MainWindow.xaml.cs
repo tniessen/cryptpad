@@ -48,8 +48,11 @@ namespace cryptpad
 
             textEditor.TextChanged += new TextChangedEventHandler((sender, args) => fileChanged = true);
 
+            textEditor.SelectionChanged += new RoutedEventHandler((sender, args) => UpdateStatusBarText());
+
             // Initialize based on settings
             UpdateTextWrappingMode();
+            UpdateStatusBarVisibility();
 
             // If a file was "opened with" cryptpad, try to load it
             App app = (App)Application.Current;
@@ -346,6 +349,45 @@ namespace cryptpad
             {
                 textEditor.TextWrapping = TextWrapping.NoWrap;
             }
+        }
+
+        public void StatusBarCommandExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            UpdateStatusBarVisibility();
+        }
+
+        private void UpdateStatusBarVisibility()
+        {
+            if (Properties.Settings.Default.StatusBar)
+            {
+                statusBar.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                statusBar.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void UpdateStatusBarText()
+        {
+            string text = textEditor.Text;
+            int index = textEditor.CaretIndex;
+
+            int line = 1, column = 1;
+            for (int i = 0; i < index; i++)
+            {
+                if (text[i] == '\n')
+                {
+                    line++;
+                    column = 1;
+                }
+                else
+                {
+                    column++;
+                }
+            }
+
+            statusBarText.Text = "Line " + line + ", Column " + column;
         }
 
         /// <summary>

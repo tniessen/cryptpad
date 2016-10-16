@@ -13,9 +13,10 @@
         <CommandBinding Command="Save" Executed="SaveCommandExecuted" CanExecute="CanExecuteSaveCommand" />
         <CommandBinding Command="SaveAs" Executed="SaveAsCommandExecuted" />
         <CommandBinding Command="local:CustomCommands.WordWrap" Executed="WordWrapCommandExecuted" />
+        <CommandBinding Command="local:CustomCommands.StatusBar" Executed="StatusBarCommandExecuted" />
         <CommandBinding Command="local:CustomCommands.Exit" Executed="ExitCommandExecuted" />
     </Window.CommandBindings>
-    <DockPanel>
+    <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Command="New" />
@@ -34,7 +35,15 @@
             <MenuItem Header="F_ormat">
                 <MenuItem IsCheckable="True" Command="local:CustomCommands.WordWrap" IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=WordWrap}" />
             </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem IsCheckable="True" Command="local:CustomCommands.StatusBar" IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=StatusBar}" />
+            </MenuItem>
         </Menu>
+        <StatusBar DockPanel.Dock="Bottom" Name="statusBar">
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock Name="statusBarText" />
+            </StatusBarItem>
+        </StatusBar>
         <TextBox AcceptsReturn="True" Name="textEditor" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" />
     </DockPanel>
 </Window>
