@@ -118,84 +118,84 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BtnCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Abbrechen</value>
   </data>
   <data name="BtnOK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="CommandExit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Beenden</value>
   </data>
   <data name="CommandStatusBar" xml:space="preserve">
-    <value>Status bar</value>
+    <value>Statusleiste</value>
   </data>
   <data name="CommandWordWrap" xml:space="preserve">
-    <value>Word wrap</value>
+    <value>Zeilenumbruch</value>
   </data>
   <data name="DefaultTitle" xml:space="preserve">
-    <value>Unnamed</value>
+    <value>Unbenannt</value>
   </data>
   <data name="DialogReadCryptoErrorText" xml:space="preserve">
-    <value>A cryptographic exception occurred while reading the file:
+    <value>Ein kryptografischer Fehler ist beim Lesen der Datei aufgetreten:
 {0}
 
-Please ensure that
-- the password is correct
-- you selected the correct encryption algorithm,
-- you selected the correct key size and
-- you selected the correct key generation algorithm.</value>
+Bitte stellen Sie sicher, dass
+- das Passwort korrekt ist,
+- der richtige Verschlüsselungsalgorithmus gewählt wurde,
+- die Schlüssellänge richtig eingestellt wurde und dass
+- der korrekte Schlüsselerzeugungsalgorithmus gewählt wurde.</value>
   </data>
   <data name="DialogReadCryptoErrorTitle" xml:space="preserve">
-    <value>Error</value>
+    <value>Fehler</value>
   </data>
   <data name="DialogReadErrorText" xml:space="preserve">
-    <value>An unexpected exception occurred while reading the file:
+    <value>Ein unerwarteter Fehler ist beim Lesen der Datei aufgetreten:
 {0}</value>
   </data>
   <data name="DialogReadErrorTitle" xml:space="preserve">
-    <value>Unexpected error</value>
+    <value>Unerwarteter Fehler</value>
   </data>
   <data name="DialogSaveErrorText" xml:space="preserve">
-    <value>An unexpected exception occurred while saving the file:
+    <value>Ein unerwarteter Fehler ist beim Speichern der Datei aufgetreten:
 {0}</value>
   </data>
   <data name="DialogSaveErrorTitle" xml:space="preserve">
-    <value>Unexpected error</value>
+    <value>Unerwarteter Fehler</value>
   </data>
   <data name="DialogUnsavedChangesText" xml:space="preserve">
-    <value>This file contains unsaved changes. Do you want to save it?</value>
+    <value>Die Datei enthält Änderungen, die verloren gehen würden. Möchten Sie die Datei speichern?</value>
   </data>
   <data name="DialogUnsavedChangesTitle" xml:space="preserve">
-    <value>Unsaves changes</value>
+    <value>Änderungen nicht gespeichert</value>
   </data>
   <data name="MenuEdit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Bearbeiten</value>
   </data>
   <data name="MenuFile" xml:space="preserve">
-    <value>File</value>
+    <value>Datei</value>
   </data>
   <data name="MenuFormat" xml:space="preserve">
     <value>Format</value>
   </data>
   <data name="MenuView" xml:space="preserve">
-    <value>View</value>
+    <value>Ansicht</value>
   </data>
   <data name="PwDialogAlgorithm" xml:space="preserve">
-    <value>Algorithm</value>
+    <value>Algorithmus</value>
   </data>
   <data name="PwDialogKeyAlgorithm" xml:space="preserve">
-    <value>Key algorithm</value>
+    <value>Schlüsselalgorithmus</value>
   </data>
   <data name="PwDialogKeySize" xml:space="preserve">
-    <value>Key size</value>
+    <value>Schlüssellänge</value>
   </data>
   <data name="PwDialogTextEncoding" xml:space="preserve">
-    <value>Text encoding</value>
+    <value>Zeichenkodierung</value>
   </data>
   <data name="PwDialogTitle" xml:space="preserve">
-    <value>Password</value>
+    <value>Passwort</value>
   </data>
   <data name="StatusBarPositionText" xml:space="preserve">
-    <value>Line {0}, Column {1}</value>
+    <value>Zeile {0}, Spalte {1}</value>
   </data>
 </root>

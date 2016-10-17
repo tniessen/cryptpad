@@ -20,7 +20,7 @@
     </Window.CommandBindings>
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File">
+            <MenuItem Header="{x:Static properties:Resources.MenuFile}">
                 <MenuItem Command="New" />
                 <MenuItem Command="Open" />
                 <MenuItem Command="Save" />
@@ -28,16 +28,16 @@
                 <Separator />
                 <MenuItem Command="local:CustomCommands.Exit" />
             </MenuItem>
-            <MenuItem Header="_Edit">
+            <MenuItem Header="{x:Static properties:Resources.MenuEdit}">
                 <MenuItem Command="Undo" />
                 <MenuItem Command="Redo" />
                 <Separator />
                 <MenuItem Command="SelectAll" />
             </MenuItem>
-            <MenuItem Header="F_ormat">
+            <MenuItem Header="{x:Static properties:Resources.MenuFormat}">
                 <MenuItem IsCheckable="True" Command="local:CustomCommands.WordWrap" IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=WordWrap}" />
             </MenuItem>
-            <MenuItem Header="_View">
+            <MenuItem Header="{x:Static properties:Resources.MenuView}">
                 <MenuItem IsCheckable="True" Command="local:CustomCommands.StatusBar" IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=StatusBar}" />
             </MenuItem>
         </Menu>

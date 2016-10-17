@@ -32,7 +32,7 @@ namespace cryptpad
 
                 if(value == null)
                 {
-                    Title = "Unnamed";
+                    Title = Properties.Resources.DefaultTitle;
                 }
                 else
                 {
@@ -105,8 +105,9 @@ namespace cryptpad
             if(fileChanged)
             {
                 MessageBoxResult res = MessageBox.Show(this,
-                    "The file contains unsaved changes. Do you want to save it?",
-                    "Unsaved changes", MessageBoxButton.YesNoCancel, MessageBoxImage.Warning);
+                    Properties.Resources.DialogUnsavedChangesText,
+                    Properties.Resources.DialogUnsavedChangesTitle,
+                    MessageBoxButton.YesNoCancel, MessageBoxImage.Warning);
 
                 switch (res)
                 {
@@ -271,20 +272,17 @@ namespace cryptpad
                 }
                 catch (CryptographicException e)
                 {
-                    string message = "A cryptographic exception occurred while reading the file:\n";
-                    message += e.Message;
-                    message += "\n\nPlease ensure that";
-                    message += "\n - the password is correct,";
-                    message += "\n - you selected the correct encryption algorithm,";
-                    message += "\n - you selected the correct key size and";
-                    message += "\n - you selected the correct key generation algorithm.";
-                    MessageBox.Show(this, message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(this,
+                        string.Format(Properties.Resources.DialogReadCryptoErrorText, e.Message),
+                        Properties.Resources.DialogReadCryptoErrorTitle,
+                        MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 catch (Exception e)
                 {
-                    string message = "An unexpected exception occurred while reading the file:\n";
-                    message += e.Message;
-                    MessageBox.Show(this, message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(this,
+                        string.Format(Properties.Resources.DialogReadErrorTitle, e.Message),
+                        Properties.Resources.DialogReadErrorTitle,
+                        MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 finally
                 {
@@ -339,9 +337,10 @@ namespace cryptpad
                 }
                 catch (Exception e)
                 {
-                    string message = "An unexpected exception occurred while reading the file:\n";
-                    message += e.Message;
-                    MessageBox.Show(this, message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(this,
+                        string.Format(Properties.Resources.DialogSaveErrorTitle, e.Message),
+                        Properties.Resources.DialogSaveErrorTitle,
+                        MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 finally
                 {
@@ -405,7 +404,7 @@ namespace cryptpad
                 }
             }
 
-            statusBarText.Text = "Line " + line + ", Column " + column;
+            statusBarText.Text = string.Format(Properties.Resources.StatusBarPositionText, line, column);
         }
 
         /// <summary>

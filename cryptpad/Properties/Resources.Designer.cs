@@ -22,7 +22,7 @@ namespace cryptpad.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace cryptpad.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("cryptpad.Properties.Resources", typeof(Resources).Assembly);
@@ -51,12 +51,237 @@ namespace cryptpad.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string BtnCancel {
+            get {
+                return ResourceManager.GetString("BtnCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string BtnOK {
+            get {
+                return ResourceManager.GetString("BtnOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        public static string CommandExit {
+            get {
+                return ResourceManager.GetString("CommandExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status bar.
+        /// </summary>
+        public static string CommandStatusBar {
+            get {
+                return ResourceManager.GetString("CommandStatusBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word wrap.
+        /// </summary>
+        public static string CommandWordWrap {
+            get {
+                return ResourceManager.GetString("CommandWordWrap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unnamed.
+        /// </summary>
+        public static string DefaultTitle {
+            get {
+                return ResourceManager.GetString("DefaultTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A cryptographic exception occurred while reading the file:
+        ///{0}
+        ///
+        ///Please ensure that
+        ///- the password is correct
+        ///- you selected the correct encryption algorithm,
+        ///- you selected the correct key size and
+        ///- you selected the correct key generation algorithm..
+        /// </summary>
+        public static string DialogReadCryptoErrorText {
+            get {
+                return ResourceManager.GetString("DialogReadCryptoErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string DialogReadCryptoErrorTitle {
+            get {
+                return ResourceManager.GetString("DialogReadCryptoErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unexpected exception occurred while reading the file:
+        ///{0}.
+        /// </summary>
+        public static string DialogReadErrorText {
+            get {
+                return ResourceManager.GetString("DialogReadErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected error.
+        /// </summary>
+        public static string DialogReadErrorTitle {
+            get {
+                return ResourceManager.GetString("DialogReadErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unexpected exception occurred while saving the file:
+        ///{0}.
+        /// </summary>
+        public static string DialogSaveErrorText {
+            get {
+                return ResourceManager.GetString("DialogSaveErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected error.
+        /// </summary>
+        public static string DialogSaveErrorTitle {
+            get {
+                return ResourceManager.GetString("DialogSaveErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This file contains unsaved changes. Do you want to save it?.
+        /// </summary>
+        public static string DialogUnsavedChangesText {
+            get {
+                return ResourceManager.GetString("DialogUnsavedChangesText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsaves changes.
+        /// </summary>
+        public static string DialogUnsavedChangesTitle {
+            get {
+                return ResourceManager.GetString("DialogUnsavedChangesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string MenuEdit {
+            get {
+                return ResourceManager.GetString("MenuEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        public static string MenuFile {
+            get {
+                return ResourceManager.GetString("MenuFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Format.
+        /// </summary>
+        public static string MenuFormat {
+            get {
+                return ResourceManager.GetString("MenuFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View.
+        /// </summary>
+        public static string MenuView {
+            get {
+                return ResourceManager.GetString("MenuView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Algorithm.
+        /// </summary>
+        public static string PwDialogAlgorithm {
+            get {
+                return ResourceManager.GetString("PwDialogAlgorithm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key algorithm.
+        /// </summary>
+        public static string PwDialogKeyAlgorithm {
+            get {
+                return ResourceManager.GetString("PwDialogKeyAlgorithm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key size.
+        /// </summary>
+        public static string PwDialogKeySize {
+            get {
+                return ResourceManager.GetString("PwDialogKeySize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text encoding.
+        /// </summary>
+        public static string PwDialogTextEncoding {
+            get {
+                return ResourceManager.GetString("PwDialogTextEncoding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string PwDialogTitle {
+            get {
+                return ResourceManager.GetString("PwDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line {0}, Column {1}.
+        /// </summary>
+        public static string StatusBarPositionText {
+            get {
+                return ResourceManager.GetString("StatusBarPositionText", resourceCulture);
             }
         }
     }

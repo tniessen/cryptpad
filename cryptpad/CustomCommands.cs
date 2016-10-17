@@ -5,19 +5,19 @@ namespace cryptpad
     public static class CustomCommands
     {
         public static readonly RoutedUICommand Exit = new RoutedUICommand(
-            "Exit",
+            Properties.Resources.CommandExit,
             "Exit",
             typeof(CustomCommands)
         );
 
         public static readonly RoutedUICommand WordWrap = new RoutedUICommand(
-            "Word wrap",
+            Properties.Resources.CommandWordWrap,
             "WordWrap",
             typeof(CustomCommands)
         );
 
         public static readonly RoutedUICommand StatusBar = new RoutedUICommand(
-            "Status bar",
+            Properties.Resources.CommandStatusBar,
             "StatusBar",
             typeof(CustomCommands)
         );
