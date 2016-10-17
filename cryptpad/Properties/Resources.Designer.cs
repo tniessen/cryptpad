@@ -79,6 +79,15 @@ namespace cryptpad.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string CommandDelete {
+            get {
+                return ResourceManager.GetString("CommandDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
         public static string CommandExit {
@@ -192,6 +201,15 @@ namespace cryptpad.Properties {
         public static string DialogUnsavedChangesTitle {
             get {
                 return ResourceManager.GetString("DialogUnsavedChangesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string KeyDelete {
+            get {
+                return ResourceManager.GetString("KeyDelete", resourceCulture);
             }
         }
         

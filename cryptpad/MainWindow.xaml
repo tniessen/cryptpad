@@ -32,13 +32,24 @@
                 <MenuItem Command="Undo" />
                 <MenuItem Command="Redo" />
                 <Separator />
+                <MenuItem Command="Cut" />
+                <MenuItem Command="Copy" />
+                <MenuItem Command="Paste" />
+                <MenuItem Command="EditingCommands.Delete"
+                          Header="{x:Static properties:Resources.CommandDelete}"
+                          InputGestureText="{x:Static properties:Resources.KeyDelete}" />
+                <Separator />
                 <MenuItem Command="SelectAll" />
             </MenuItem>
             <MenuItem Header="{x:Static properties:Resources.MenuFormat}">
-                <MenuItem IsCheckable="True" Command="local:CustomCommands.WordWrap" IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=WordWrap}" />
+                <MenuItem IsCheckable="True"
+                          Command="local:CustomCommands.WordWrap"
+                          IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=WordWrap}" />
             </MenuItem>
             <MenuItem Header="{x:Static properties:Resources.MenuView}">
-                <MenuItem IsCheckable="True" Command="local:CustomCommands.StatusBar" IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=StatusBar}" />
+                <MenuItem IsCheckable="True"
+                          Command="local:CustomCommands.StatusBar"
+                          IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=StatusBar}" />
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom" Name="statusBar">

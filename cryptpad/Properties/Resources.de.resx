@@ -123,6 +123,9 @@
   <data name="BtnOK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="CommandDelete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
   <data name="CommandExit" xml:space="preserve">
     <value>Beenden</value>
   </data>
@@ -167,6 +170,9 @@ Bitte stellen Sie sicher, dass
   </data>
   <data name="DialogUnsavedChangesTitle" xml:space="preserve">
     <value>Änderungen nicht gespeichert</value>
+  </data>
+  <data name="KeyDelete" xml:space="preserve">
+    <value>Entf</value>
   </data>
   <data name="MenuEdit" xml:space="preserve">
     <value>Bearbeiten</value>
