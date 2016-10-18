@@ -371,6 +371,7 @@ namespace cryptpad
         public void StatusBarCommandExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             UpdateStatusBarVisibility();
+            UpdateStatusBarText();
         }
 
         private void UpdateStatusBarVisibility()
@@ -387,6 +388,11 @@ namespace cryptpad
 
         private void UpdateStatusBarText()
         {
+            if(statusBar.Visibility != Visibility.Visible)
+            {
+                return;
+            }
+
             string text = textEditor.Text;
             int index = textEditor.CaretIndex;
 
