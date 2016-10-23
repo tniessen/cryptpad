@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel;
 using System.IO;
+using System.Reflection;
 using System.Security;
 using System.Security.Cryptography;
 using System.Text;
@@ -30,14 +31,9 @@ namespace cryptpad
             {
                 filePath = value;
 
-                if(value == null)
-                {
-                    Title = Properties.Resources.DefaultTitle;
-                }
-                else
-                {
-                    Title = value;
-                }
+                string fileName = (value == null) ? Properties.Resources.DefaultTitle : value;
+                string appName = Assembly.GetExecutingAssembly().GetName().Name;
+                Title = fileName + " - " + appName;
             }
         }
 
