@@ -61,6 +61,42 @@ namespace cryptpad.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Built on {0} at {1}.
+        /// </summary>
+        public static string AboutBuildTime {
+            get {
+                return ResourceManager.GetString("AboutBuildTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About cryptpad.
+        /// </summary>
+        public static string AboutDialogTitle {
+            get {
+                return ResourceManager.GetString("AboutDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://github.com/tniessen/cryptpad.
+        /// </summary>
+        public static string AboutHomepage {
+            get {
+                return ResourceManager.GetString("AboutHomepage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MIT License.
+        /// </summary>
+        public static string AboutLicense {
+            get {
+                return ResourceManager.GetString("AboutLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string BtnCancel {
@@ -75,6 +111,15 @@ namespace cryptpad.Properties {
         public static string BtnOK {
             get {
                 return ResourceManager.GetString("BtnOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About cryptpad.
+        /// </summary>
+        public static string CommandAboutTheApp {
+            get {
+                return ResourceManager.GetString("CommandAboutTheApp", resourceCulture);
             }
         }
         

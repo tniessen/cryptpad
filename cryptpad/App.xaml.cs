@@ -17,12 +17,13 @@ namespace cryptpad
             InitializeComponent();
 
             // Automatically save settings on change
-            Settings.Default.PropertyChanged += new PropertyChangedEventHandler((sender, e) => {
+            Settings.Default.PropertyChanged += new PropertyChangedEventHandler((sender, e) =>
+            {
                 Settings.Default.Save();
             });
 
             string[] args = Environment.GetCommandLineArgs();
-            if(args.Length > 1)
+            if (args.Length > 1)
             {
                 StartupFilePath = args[1];
             }

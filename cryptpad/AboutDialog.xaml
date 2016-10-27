@@ -1,0 +1,32 @@
+﻿<Window x:Class="cryptpad.AboutDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cryptpad"
+        xmlns:properties="clr-namespace:cryptpad.Properties"
+        mc:Ignorable="d"
+        Name="_this"
+        Icon="icon.ico"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        PreviewKeyDown="WindowKeyDown"
+        Title="{x:Static properties:Resources.AboutDialogTitle}" Height="235" Width="300">
+    <StackPanel Margin="10px">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Image Width="100" Height="100" Source="icon.ico" Margin="0,0,10,0" />
+            <StackPanel>
+                <TextBlock FontSize="24" Text="{Binding ElementName=_this, Path=AppTitle}" />
+                <TextBlock Foreground="DarkGray" Text="{Binding ElementName=_this, Path=AppVersion}" />
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Margin="0,0,0,5" Foreground="LightGray" Text="{Binding ElementName=_this, Path=AppBuildDate}" />
+        <TextBlock Margin="0,0,0,5" Foreground="LightGray" Text="{x:Static properties:Resources.AboutLicense}" />
+        <TextBlock>
+            <Hyperlink NavigateUri="{Binding ElementName=_this, Path=AppHomepageUri}"
+                       RequestNavigate="HomepageLinkClicked">
+                <TextBlock Text="{x:Static properties:Resources.AboutHomepage}" />
+            </Hyperlink>
+        </TextBlock>
+    </StackPanel>
+</Window>

@@ -21,5 +21,11 @@ namespace cryptpad
             "StatusBar",
             typeof(CustomCommands)
         );
+
+        public static readonly RoutedUICommand AboutTheApp = new RoutedUICommand(
+            Properties.Resources.CommandAboutTheApp,
+            "AboutTheApp",
+            typeof(CustomCommands)
+        );
     }
 }

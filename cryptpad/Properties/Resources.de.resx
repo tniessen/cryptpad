@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutBuildTime" xml:space="preserve">
+    <value>Erstellt am {0} um {1}</value>
+  </data>
+  <data name="AboutDialogTitle" xml:space="preserve">
+    <value>Über cryptpad</value>
+  </data>
   <data name="BtnCancel" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
   <data name="BtnOK" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="CommandAboutTheApp" xml:space="preserve">
+    <value>Über cryptpad</value>
   </data>
   <data name="CommandDelete" xml:space="preserve">
     <value>Löschen</value>

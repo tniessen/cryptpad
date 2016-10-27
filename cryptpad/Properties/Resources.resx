@@ -117,11 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutBuildTime" xml:space="preserve">
+    <value>Built on {0} at {1}</value>
+  </data>
+  <data name="AboutDialogTitle" xml:space="preserve">
+    <value>About cryptpad</value>
+  </data>
+  <data name="AboutHomepage" xml:space="preserve">
+    <value>https://github.com/tniessen/cryptpad</value>
+  </data>
+  <data name="AboutLicense" xml:space="preserve">
+    <value>MIT License</value>
+  </data>
   <data name="BtnCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
   <data name="BtnOK" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="CommandAboutTheApp" xml:space="preserve">
+    <value>About cryptpad</value>
   </data>
   <data name="CommandDelete" xml:space="preserve">
     <value>Delete</value>

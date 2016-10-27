@@ -409,6 +409,13 @@ namespace cryptpad
             statusBarText.Text = string.Format(Properties.Resources.StatusBarPositionText, line, column);
         }
 
+        private void AboutTheAppExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            AboutDialog dialog = new AboutDialog();
+            dialog.Owner = this;
+            dialog.ShowDialog();
+        }
+
         /// <summary>
         /// Handler for File → Exit
         /// </summary>

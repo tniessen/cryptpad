@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Loaded="WindowLoaded"
         Closing="WindowClosing"
+        Icon="icon.ico"
         Title="MainWindow" Height="500" Width="700">
     <Window.CommandBindings>
         <CommandBinding Command="New" Executed="NewCommandExecuted" />
@@ -17,6 +18,7 @@
         <CommandBinding Command="local:CustomCommands.WordWrap" Executed="WordWrapCommandExecuted" />
         <CommandBinding Command="local:CustomCommands.StatusBar" Executed="StatusBarCommandExecuted" />
         <CommandBinding Command="local:CustomCommands.Exit" Executed="ExitCommandExecuted" />
+        <CommandBinding Command="local:CustomCommands.AboutTheApp" Executed="AboutTheAppExecuted" />
     </Window.CommandBindings>
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top">
@@ -50,6 +52,9 @@
                 <MenuItem IsCheckable="True"
                           Command="local:CustomCommands.StatusBar"
                           IsChecked="{Binding Source={x:Static properties:Settings.Default}, Path=StatusBar}" />
+            </MenuItem>
+            <MenuItem Header="?">
+                <MenuItem Command="local:CustomCommands.AboutTheApp" />
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom" Name="statusBar">
