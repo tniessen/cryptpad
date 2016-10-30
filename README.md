@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/rdkgt36mc8ksjp7d?svg=true)](https://ci.appveyor.com/project/tniessen/cryptpad)
 
 ## Building and requirements
 
