@@ -147,6 +147,12 @@
   <data name="DefaultTitle" xml:space="preserve">
     <value>Unbenannt</value>
   </data>
+  <data name="DialogPasswordsDontMatchText" xml:space="preserve">
+    <value>Die Passwörter stimmen nicht überein.</value>
+  </data>
+  <data name="DialogPasswordsDontMatchTitle" xml:space="preserve">
+    <value>Passwörter stimmen nicht überein</value>
+  </data>
   <data name="DialogReadCryptoErrorText" xml:space="preserve">
     <value>Ein kryptografischer Fehler ist beim Lesen der Datei aufgetreten:
 {0}

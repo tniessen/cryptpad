@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace cryptpad
 {
     static class Extensions
@@ -12,6 +14,28 @@ namespace cryptpad
             {
                 array[i] = value;
             }
+        }
+
+        /// <summary>
+        /// Compares two arrays for equality, considering their contents.
+        /// </summary>
+        public static bool DeepEquals<T>(this T[] a, T[] b)
+        {
+            if (a.Length != b.Length)
+            {
+                return false;
+            }
+
+            EqualityComparer<T> comparer = EqualityComparer<T>.Default;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (!comparer.Equals(a[i], b[i]))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         /// <summary>

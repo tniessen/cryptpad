@@ -169,6 +169,24 @@ namespace cryptpad.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The passwords do not match..
+        /// </summary>
+        public static string DialogPasswordsDontMatchText {
+            get {
+                return ResourceManager.GetString("DialogPasswordsDontMatchText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passwords do not match.
+        /// </summary>
+        public static string DialogPasswordsDontMatchTitle {
+            get {
+                return ResourceManager.GetString("DialogPasswordsDontMatchTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A cryptographic exception occurred while reading the file:
         ///{0}
         ///

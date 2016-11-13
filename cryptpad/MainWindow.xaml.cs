@@ -218,6 +218,7 @@ namespace cryptpad
         private bool Load(string path)
         {
             PasswordDialog dialog = new PasswordDialog();
+            dialog.NeedsVerifcation = false;
 
             // If we are opening a file on startup, the main window has not been visible yet, and
             // thus is not a valid owner at this point.
@@ -296,6 +297,7 @@ namespace cryptpad
         {
             PasswordDialog dialog = new PasswordDialog();
             dialog.Owner = this;
+            dialog.NeedsVerifcation = true;
 
             if (dialog.ShowDialog() == true)
             {

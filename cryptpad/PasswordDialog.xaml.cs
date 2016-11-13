@@ -15,6 +15,25 @@ namespace cryptpad
             get { return passwordBox.SecurePassword; }
         }
 
+        private bool needsVerification;
+
+        public bool NeedsVerifcation
+        {
+            set
+            {
+                if(needsVerification = value)
+                {
+                    passwordConfirmationBox.Visibility = Visibility.Visible;
+                    Height = 235;
+                }
+                else
+                {
+                    passwordConfirmationBox.Visibility = Visibility.Collapsed;
+                    Height = 205;
+                }
+            }
+        }
+
         public EncryptionConfiguration EncryptionConfig;
 
         public Encoding TextEncoding;
@@ -22,6 +41,8 @@ namespace cryptpad
         public PasswordDialog()
         {
             InitializeComponent();
+
+            NeedsVerifcation = false;
 
             Loaded += new RoutedEventHandler((sender, args) => passwordBox.Focus());
 
@@ -108,6 +129,30 @@ namespace cryptpad
 
         public void OKClicked(object sender, EventArgs args)
         {
+            if(needsVerification)
+            {
+                using (SecureString pw1 = passwordBox.SecurePassword)
+                {
+                    using (SecureString pw2 = passwordConfirmationBox.SecurePassword)
+                    {
+                        using (SecureStringBytes pw1b = new SecureStringBytes(pw1, Encoding.UTF8))
+                        {
+                            using (SecureStringBytes pw2b = new SecureStringBytes(pw2, Encoding.UTF8))
+                            {
+                                if (!pw1b.Bytes.DeepEquals(pw2b.Bytes))
+                                {
+                                    MessageBox.Show(this,
+                                        Properties.Resources.DialogPasswordsDontMatchText,
+                                        Properties.Resources.DialogPasswordsDontMatchTitle,
+                                        MessageBoxButton.OK, MessageBoxImage.Error);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             DialogResult = true;
         }
     }

@@ -153,6 +153,12 @@
   <data name="DefaultTitle" xml:space="preserve">
     <value>Unnamed</value>
   </data>
+  <data name="DialogPasswordsDontMatchText" xml:space="preserve">
+    <value>The passwords do not match.</value>
+  </data>
+  <data name="DialogPasswordsDontMatchTitle" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
   <data name="DialogReadCryptoErrorText" xml:space="preserve">
     <value>A cryptographic exception occurred while reading the file:
 {0}
