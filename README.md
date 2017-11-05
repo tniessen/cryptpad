@@ -24,22 +24,26 @@ SHA-256. However, only minimal changes are required to adapt the commands to oth
 
 First, you need to create the key:
 
-    key=`echo -n "$password" | sha256sum | head -c 64`
+```bash
+key=`echo -n "$password" | sha256sum | head -c 64`
+```
 
 To encrypt content, generate a random initialization vector and its hexadecimal representation,
 and use it in combination with the computed key in order to produce the output file:
 
-    dd if=/dev/random bs=16 count=1 status=none > file.stxt
-    iv=`xxd -c 32 -p file.stxt`
+```bash
+dd if=/dev/random bs=16 count=1 status=none > file.stxt
+iv=`xxd -c 32 -p file.stxt`
 
-    echo 'Hello world!' | openssl enc -aes-256-cbc -e -iv $iv -K $key >> file.stxt
+echo 'Hello world!' | openssl enc -aes-256-cbc -e -iv $iv -K $key >> file.stxt
+```
 
 You can now open `file.stxt` in cryptpad.
 
 To decrypt the file, we need to read the IV before reading the actual contents:
 
-    iv=`dd if=file.stxt bs=16 count=1 status=none | xxd -c 32 -p`
+```bash
+iv=`dd if=file.stxt bs=16 count=1 status=none | xxd -c 32 -p`
 
-    dd if=file.stxt bs=16 skip=1 status=none | openssl enc -aes-256-cbc -d -iv $iv -K $key
-
-
+dd if=file.stxt bs=16 skip=1 status=none | openssl enc -aes-256-cbc -d -iv $iv -K $key
+```
